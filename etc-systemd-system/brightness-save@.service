@@ -1,0 +1,8 @@
+# saves brightness when the watched brightness file changes
+[Unit]
+Description=Save AMD backlight brightness for %i
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/brightness-save.sh
+

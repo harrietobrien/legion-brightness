@@ -1,0 +1,10 @@
+# watches the brightness file for a given device (instance name)
+[Unit]
+Description=Watch AMD backlight brightness file for %i and save on change
+
+[Path]
+PathChanged=/sys/class/backlight/%i/brightness
+
+[Install]
+WantedBy=multi-user.target
+

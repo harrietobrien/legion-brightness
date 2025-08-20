@@ -1,0 +1,14 @@
+# restores brightness early in boot so the display is readable at login
+[Unit]
+Description=Restore AMD backlight brightness at boot
+DefaultDependencies=no
+After=systemd-udev-settle.service
+Before=display-manager.service graphical.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/brightness-restore.sh
+
+[Install]
+WantedBy=multi-user.target
+

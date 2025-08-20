@@ -1,0 +1,6 @@
+# make amd backlight writable and initialize a sane default on add
+# note: __AMD_BL__ is replaced by the installer
+ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="__AMD_BL__", \
+  RUN+="/bin/chgrp video /sys/class/backlight/%k/brightness", \
+  RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness"
+

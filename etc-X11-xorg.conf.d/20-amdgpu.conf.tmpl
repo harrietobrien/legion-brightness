@@ -1,0 +1,7 @@
+# hint some desktops/toolkits to prefer the amd backlight device
+Section "Device"
+    Identifier  "AMD Graphics"
+    Driver      "amdgpu"
+    Option      "Backlight" "__AMD_BL__"
+EndSection
+
