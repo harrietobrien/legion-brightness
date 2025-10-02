@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# copies separate files into place, sets GRUB arg, fills templates with the detected device,
-# and enables systemd units. use --revert to undo. no Xorg involved.
+# copies separate files into place, sets boot arg, fills templates with the detected device,
+# and enables systemd units. use --revert to undo.
 
 set -euo pipefail
 
